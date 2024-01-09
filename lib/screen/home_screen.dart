@@ -175,7 +175,7 @@ class Homescreen extends StatelessWidget {
                               'assets/12.png',
                               scale: 10,
                             ),
-                            const SizedBox(width: 15),
+                            const SizedBox(width: 16),
                             const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
