@@ -16,7 +16,7 @@ class Homescreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           systemOverlayStyle:
-              SystemUiOverlayStyle(statusBarBrightness: Brightness.dark)),
+              const SystemUiOverlayStyle(statusBarBrightness: Brightness.dark)),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(40, 1.2 * kToolbarHeight, 40, 20),
         child: SizedBox(
@@ -25,35 +25,35 @@ class Homescreen extends StatelessWidget {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(-9, -0.3),
+                alignment: const AlignmentDirectional(-9, -0.3),
                 child: Container(
                   height: 300,
                   width: 300,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Colors.deepPurple),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(9, -0.3),
+                alignment: const AlignmentDirectional(9, -0.3),
                 child: Container(
                   height: 300,
                   width: 300,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Colors.deepPurple),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -1.2),
+                alignment: const AlignmentDirectional(0, -1.2),
                 child: Container(
                   height: 300,
                   width: 600,
-                  decoration: BoxDecoration(color: Colors.orangeAccent),
+                  decoration: const BoxDecoration(color: Colors.orangeAccent),
                 ),
               ),
               BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
                   child: Container(
-                    decoration: BoxDecoration(color: Colors.transparent),
+                    decoration: const BoxDecoration(color: Colors.transparent),
                   )),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
@@ -65,8 +65,8 @@ class Homescreen extends StatelessWidget {
                     const Text('Aix-en-Provence',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w300)),
-                    SizedBox(height: 8),
-                    Text('Good Morning',
+                    const SizedBox(height: 8),
+                    const Text('Good Morning',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -160,7 +160,7 @@ class Homescreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(vertical: 5.0),
                       child: Divider(
                         color: Colors.grey,
