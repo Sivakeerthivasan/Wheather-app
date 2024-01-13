@@ -65,7 +65,7 @@ class Homescreen extends StatelessWidget {
                     const Text('Aix-en-Provence',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w300)),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 10),
                     const Text('Good Morning',
                         style: TextStyle(
                             color: Colors.white,
