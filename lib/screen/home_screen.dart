@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
@@ -68,7 +67,7 @@ class Homescreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(' ${state.Weather.areaName}',
+                          Text(' ${state.weather.areaName}',
                               style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w300)),
@@ -81,7 +80,7 @@ class Homescreen extends StatelessWidget {
                           Image.asset('assets/3.png'),
                           Center(
                             child: Text(
-                              '${state.Weather.temperature!.celsius!.round()}°C',
+                              '${state.weather.temperature!.celsius!.round()}°C',
                               style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -90,7 +89,7 @@ class Homescreen extends StatelessWidget {
                           ),
                           Center(
                             child: Text(
-                              state.Weather.weatherMain!.toUpperCase(),
+                              state.weather.weatherMain!.toUpperCase(),
                               style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -99,12 +98,13 @@ class Homescreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 5),
                           Center(
-                            DateFormat('EEEE dd ·') .add_jm().format(state.Weather.date!),
                             child: Text(
-                              //'Friday 16 · 09.41am',
-                              style: TextStyle(
+                              DateFormat('EEEE dd •')
+                                  .add_jm()
+                                  .format(state.weather.date!),
+                              style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w300),
                             ),
                           ),
